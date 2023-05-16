@@ -17,7 +17,6 @@ function App() {
         <>
             <Header text="Review App" />
             <div className="container">
-                <FeedbackForm/>
                 <FeedbackStats feedback={feedback} />
                 <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
             </div>           
