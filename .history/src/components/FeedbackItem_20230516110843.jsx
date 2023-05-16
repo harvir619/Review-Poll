@@ -9,14 +9,14 @@ function FeedbackItem({item,handleDelete}) {
     const [rating,setRating] = useState(item.rating)
     const [text, setText] = useState(item.text)
     
-    // const handleClick = () => {
-    //     setRating(10)
-    // }
+    const handleClick = () => {
+        setRating(10)
+    }
     
     return (
       <Card reverse={false}>
         <div className="num-display">{rating}</div>
-        <button className="close" onClick={()=>handleDelete(item.id)}>
+        <button className="close" onClick={handleDelete}>
           <FaTimes color='purple'/>
         </button>
         <div className="text-display">{text}</div>

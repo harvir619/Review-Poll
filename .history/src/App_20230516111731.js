@@ -9,6 +9,8 @@ function App() {
         if (window.confirm('Are you sure you want to delete?')) {
             setFeedback(feedback.filter((item)=>item.id !== id))
         }
+        
+        setFeedback()
     }
     
     return (

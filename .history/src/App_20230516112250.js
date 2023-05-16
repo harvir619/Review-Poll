@@ -7,6 +7,7 @@ function App() {
     
     const deleteFeedback = (id) => {
         if (window.confirm('Are you sure you want to delete?')) {
+            console.log(feedback.filter((item)=>item.id !== id))
             setFeedback(feedback.filter((item)=>item.id !== id))
         }
     }
