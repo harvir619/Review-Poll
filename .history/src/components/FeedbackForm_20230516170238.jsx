@@ -10,18 +10,18 @@ function FeedbackForm() {
     const handleTextChange = (e) => {
         const inputValue = e.target.value;
         setText(inputValue);
-        
-        if (inputValue === '') {
-            setBtnDisabled(true);
-            setMessage(null);
-        } else if (inputValue.trim().length < 10) {
-            setMessage('Text must be at least 10 characters');
-            setBtnDisabled(true);
+        if (text === '') {
+            setBtnDisabled(true)
+            setMessage(null)
+        } else if (text !== '' && text.trim().length < 10) {
+            setMessage('Text must be at least 10 characters')
+            setBtnDisabled(true)
         } else {
-            setMessage(null);
-            setBtnDisabled(false);
+            setMessage(null)
+            setBtnDisabled(false)
         }
-    };
+        setText(e.target.value)
+    }
     
   return (
       <Card>

@@ -4,24 +4,12 @@ import {useState} from 'react'
 
 function FeedbackForm() {
     const [text, setText] = useState('')
-    const [btnDisabled, setBtnDisabled] = useState(true)
+    const [btnDisabled, setDisabled] = useState(true)
     const [message, setMessage] = useState('')
     
     const handleTextChange = (e) => {
-        const inputValue = e.target.value;
-        setText(inputValue);
-        
-        if (inputValue === '') {
-            setBtnDisabled(true);
-            setMessage(null);
-        } else if (inputValue.trim().length < 10) {
-            setMessage('Text must be at least 10 characters');
-            setBtnDisabled(true);
-        } else {
-            setMessage(null);
-            setBtnDisabled(false);
-        }
-    };
+        setText(e.target.value)
+    }
     
   return (
       <Card>
@@ -42,7 +30,7 @@ function FeedbackForm() {
                   />
               </div>
               
-              {message && <div className='message'>{message}</div>}
+              {message&& <div className='message'></div>}
           </form>
     </Card>
   )
