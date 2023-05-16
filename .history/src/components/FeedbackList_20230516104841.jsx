@@ -1,6 +1,6 @@
 import React from 'react'
 import FeedbackItem from './FeedbackItem'
-import PropTypes from 'prop-types'
+import PropType from 'prop-types'
 
 function FeedbackList({feedback}) {
     if (!feedback || feedback.length === 0) {
@@ -19,6 +19,6 @@ function FeedbackList({feedback}) {
 
 
 FeedbackList.propTypes={
-    feedback: PropTypes.array.isRequired,
+    feedback.array.isRequired,
 }
 export default FeedbackList

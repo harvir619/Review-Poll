@@ -19,6 +19,6 @@ function FeedbackList({feedback}) {
 
 
 FeedbackList.propTypes={
-    feedback: PropTypes.array.isRequired,
+    feedback.array.isRequired,
 }
 export default FeedbackList

@@ -43,7 +43,7 @@ header {
   position: relative;
 }
 
-.card.reverse {
+.card.resverse {
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
 }

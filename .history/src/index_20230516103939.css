@@ -8,10 +8,10 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #202142;
-  color: #fff;
-  /* background-color: #8dcbf0;
-  color: #202142; */
+  /* background-color: #202142;
+  color: #fff; */
+    background-color: #fff;
+  color: #202142;
   line-height: 1.6;
 }
 
