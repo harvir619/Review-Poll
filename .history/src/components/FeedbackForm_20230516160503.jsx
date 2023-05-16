@@ -21,7 +21,7 @@ function FeedbackForm() {
                       placeholder="Write a review"
                       value={text} 
                   />
-                  <Button type="Submit" children="Send"/>
+                  <Button type="Submit" children="send"/>
               </div>
           </form>
     </Card>
