@@ -28,17 +28,12 @@ function App() {
         <Router>
             <Header text="Review Poll" />
             <div className="container">
+                <FeedbackForm handleAdd={addFeedback} />
+                <FeedbackStats feedback={feedback} />
+                <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
                 <Routes>
-                    <Route
-                        exact path='/'
-                        element={
-                            <>
-                                <FeedbackForm handleAdd={addFeedback} />
-                                <FeedbackStats feedback={feedback} />
-                                <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />  
-                            </>
-                                }/>
-                    <Route path='/about' element={<AboutPage/>}/>
+                <Route path='/about' component={AboutPage}/>
+                    
                 </Routes>
             </div>           
         </Router> 

@@ -98,7 +98,7 @@ header {
 }
 
 [type='radio']:checked ~ label {
-  background: #014A89;
+  background: #ff6a95;
   color: #fff;
 }
 

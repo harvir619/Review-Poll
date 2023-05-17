@@ -6,7 +6,7 @@ import FeedbackData from "./data/FeedbackData"
 import FeedbackStats from "./components/FeedbackStats"
 import FeedbackForm from './components/FeedbackForm'
 import AboutPage from './pages/AboutPage'
-import {BrowserRouter as Router,Route, Routes} from 'react-router-dom'
+import {BrowserRouter as Router,Route} from 'react-router-dom'
 
 
 
@@ -28,18 +28,10 @@ function App() {
         <Router>
             <Header text="Review Poll" />
             <div className="container">
-                <Routes>
-                    <Route
-                        exact path='/'
-                        element={
-                            <>
-                                <FeedbackForm handleAdd={addFeedback} />
-                                <FeedbackStats feedback={feedback} />
-                                <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />  
-                            </>
-                                }/>
-                    <Route path='/about' element={<AboutPage/>}/>
-                </Routes>
+                <FeedbackForm handleAdd={addFeedback} />
+                <FeedbackStats feedback={feedback} />
+                <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+                <Route path='/about' component={AboutPage}/>
             </div>           
         </Router> 
     )

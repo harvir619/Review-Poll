@@ -31,8 +31,6 @@ function FeedbackForm({handleAdd}) {
         if (text.trim().length > 10){
             const newFeedback = { text, rating }
             handleAdd(newFeedback)
-            
-            setText('')
         }
     }
     

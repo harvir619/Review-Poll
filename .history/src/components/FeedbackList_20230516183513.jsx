@@ -3,6 +3,10 @@ import FeedbackItem from './FeedbackItem'
 import PropTypes from 'prop-types'
 import { motion, AnimatePresence } from "framer-motion"
 
+// export const MyComponent = ({ isVisible }) => (
+//     <motion.div animate={{ opacity: isVisible ? 1 : 0 }} />
+// )
+
 
 function FeedbackList({feedback,handleDelete}) {
     if (!feedback || feedback.length === 0) {
@@ -13,19 +17,11 @@ function FeedbackList({feedback,handleDelete}) {
       <div className='feedback-list'>
         <AnimatePresence>
           {feedback.map((item) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity:0 }}
-            >
-              <FeedbackItem
-                key={item.id}
-                item={item}
-                handleDelete={handleDelete}
-              />
+              <motion.div>
+                <FeedbackItem key={item.id} item={item}
+                  handleDelete={handleDelete} />
               
-            </motion.div>
+              </motion.div>
             ))}
           </AnimatePresence>
     </div>
