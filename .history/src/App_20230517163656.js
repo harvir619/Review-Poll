@@ -37,8 +37,8 @@ function App() {
                         element={
                             <>
                                 <FeedbackForm handleAdd={addFeedback} />
-                                <FeedbackStats/>
-                                <FeedbackList  handleDelete={deleteFeedback} />  
+                                <FeedbackStats feedback={feedback} />
+                                <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />  
                                
                             </>
                                 }/>
