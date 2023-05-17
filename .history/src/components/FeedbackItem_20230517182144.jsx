@@ -17,7 +17,7 @@ function FeedbackItem({item}) {
         <button className="close" onClick={()=>deleteFeedback(item.id)}>
           <FaTimes color='blue'/>
         </button>
-        <button className="edit" onClick={()=>editFeedback(item)} >
+        <button className="edit" onClick={()=>editFeedback(item.id)} >
           <FaEdit color='blue'/>
         </button>
         <div className="text-display">{text}</div>
