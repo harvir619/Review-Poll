@@ -9,12 +9,15 @@ import FeedbackContext from '../context/FeedbackContext'
 function FeedbackItem({item}) {
     const [rating,setRating] = useState(item.rating)
     const [text, setText] = useState(item.text)
-    const {deleteFeedback} = useContext(FeedbackContext)
+    const FeedbackContext = useContext(FeedbackContext)
+    // const handleClick = () => {
+    //     setRating(10)
+    // }
     
     return (
       <Card reverse={false}>
         <div className="num-display">{rating}</div>
-        <button className="close" onClick={()=>deleteFeedback(item.id)}>
+        <button className="close" onClick={()=>handleDelete(item.id)}>
           <FaTimes color='purple'/>
         </button>
         <div className="text-display">{text}</div>

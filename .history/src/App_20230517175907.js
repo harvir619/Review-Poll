@@ -18,12 +18,12 @@ function App() {
                     <Route
                         exact path='/'
                         element={
-                                    <>
-                                        <FeedbackForm/>
-                                        <FeedbackStats/>
-                                        <FeedbackList/>  
-                                    </>
-                                }/>
+                            <>
+                                <FeedbackForm/>
+                                <FeedbackStats/>
+                                <FeedbackList/>  
+                            </>
+}/>
                     <Route path='/about' element={<AboutPage />} />
                     
                 </Routes>

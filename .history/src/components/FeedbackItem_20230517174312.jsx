@@ -10,6 +10,9 @@ function FeedbackItem({item}) {
     const [rating,setRating] = useState(item.rating)
     const [text, setText] = useState(item.text)
     const {deleteFeedback} = useContext(FeedbackContext)
+    // const handleClick = () => {
+    //     setRating(10)
+    // }
     
     return (
       <Card reverse={false}>
