@@ -20,18 +20,15 @@ export const FeedbackProvider = ({children}) => {
         newFeedback.id = uuidv4()
         setFeedback([newFeedback, ...feedback])
     }
-
+    
     //Update feedback item
-    const updateFeedback = (id, updItem) => {
+    const updateFeedback = (id,updItem) => {
         setFeedback(
             feedback.map((item) =>
-                (item.id === id ? { ...item, ...updItem } : item)
+                // (item.id === id ? { ...item, ...updItem } : item)
+                (item.id === id ? { item } : item)
             )  
         )
-           setFeedbackEdit({
-      item: {},
-      edit: false,
-    })
     }
     
     //set item to be updated

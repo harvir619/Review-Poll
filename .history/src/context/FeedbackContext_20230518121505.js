@@ -28,6 +28,7 @@ export const FeedbackProvider = ({children}) => {
                 (item.id === id ? { ...item, ...updItem } : item)
             )  
         )
+        
            setFeedbackEdit({
       item: {},
       edit: false,

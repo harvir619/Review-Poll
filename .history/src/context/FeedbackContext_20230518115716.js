@@ -23,16 +23,16 @@ export const FeedbackProvider = ({children}) => {
 
     //Update feedback item
     const updateFeedback = (id, updItem) => {
-        setFeedback(
-            feedback.map((item) =>
-                (item.id === id ? { ...item, ...updItem } : item)
-            )  
-        )
-           setFeedbackEdit({
-      item: {},
-      edit: false,
-    })
-    }
+        console.log(id, updItem);
+        console.log(feedback);
+
+        setFeedback((prevFeedback) =>
+            prevFeedback.map((item) => (item.id === id ? { ...item, ...updItem } : item))
+        );
+
+        console.log(feedback);
+        setFeedbackEdit({ item: {}, edit: false });
+    };
     
     //set item to be updated
     const [feedbackEdit, setFeedbackEdit] = useState({

@@ -39,12 +39,9 @@ function FeedbackForm() {
         e.preventDefault()
         
         if (text.trim().length > 10){
-            const newFeedback = {  rating,text }
-            if (feedbackEdit.edit === true) {
-                updateFeedback(feedbackEdit.item.id, newFeedback)
-            } else {
-                addFeedback(newFeedback)
-            }            
+            const newFeedback = { text, rating }
+           addFeedback(newFeedback)
+            
             setText('')
         }
     }

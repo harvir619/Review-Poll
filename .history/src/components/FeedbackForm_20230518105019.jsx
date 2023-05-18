@@ -39,12 +39,15 @@ function FeedbackForm() {
         e.preventDefault()
         
         if (text.trim().length > 10){
-            const newFeedback = {  rating,text }
+            const newFeedback = { text, rating }
             if (feedbackEdit.edit === true) {
+                console.log("updating")
                 updateFeedback(feedbackEdit.item.id, newFeedback)
             } else {
                 addFeedback(newFeedback)
-            }            
+            }
+           addFeedback(newFeedback)
+            
             setText('')
         }
     }
