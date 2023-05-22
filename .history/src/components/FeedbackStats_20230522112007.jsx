@@ -8,6 +8,7 @@ function FeedbackStats() {
     //Calculate ratings average
     
   let average = feedback.reduce((acc, cur) => {
+          // console.log(cur.rating)
        return acc + cur.rating 
     }, 0) / feedback.length
   
